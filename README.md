@@ -16,5 +16,11 @@ Run:
 ./gradlew run
 ```
 
+# Supported Versions
+| Canonical | Chrono | Supported |
+|---|---|---|
+| < 0.1.0 | < 2026.0.1 | ❌️ |
+| 0.1.0 | 2026.0.1 | ✅ |
+
 # License
 LGPL-v2.1-or-later
