@@ -17,6 +17,7 @@ public class Caffeinetty extends Application {
     myFirstField.setAlignment(Pos.TOP_LEFT);
     myFirstField.setOnAction(event -> {
       System.out.println(myFirstField.getText());
+      myFirstField.clear();
     });
 
     Group root = new Group(myFirstField);
