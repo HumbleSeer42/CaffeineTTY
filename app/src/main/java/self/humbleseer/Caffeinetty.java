@@ -15,12 +15,16 @@ public class Caffeinetty extends Application {
     myFirstField.setMinHeight(500);
     myFirstField.setMaxSize(500, 500);
     myFirstField.setAlignment(Pos.TOP_LEFT);
+    myFirstField.setOnAction(event -> {
+      System.out.println(myFirstField.getText());
+    });
 
     Group root = new Group(myFirstField);
     Scene scene = new Scene(root, 500, 500);
 
     stage.setTitle("CaffeineTTY");
     stage.setScene(scene);
+    stage.setResizable(false);
     stage.show();
   }
 }
