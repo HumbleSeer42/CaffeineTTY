@@ -20,7 +20,8 @@ Run:
 | Canonical | Chrono | Supported |
 |---|---|---|
 | < 0.1.0 | < 2026.0.1 | ❌️ |
-| 0.1.0 | 2026.0.1 | ✅ |
+| 0.1.0 | 2026.0.1 | ❌ |
+| 0.2.0 | 2026.0.2 | ✅ |
 
 # Contributing
 This project's commit messages from commit 6c7268f on now hereby officially comply with the [Conventional Commits Specification, Version 1.0.0](https://www.conventionalcommits.org/en/v1.0.0/). Please review this document when writing commit messages.
