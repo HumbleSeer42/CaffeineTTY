@@ -11,26 +11,26 @@ import javafx.embed.swing.SwingNode;
 import javax.swing.SwingUtilities;
 
 public class Caffeinetty extends Application {
-  @Override
-  public void start(Stage stage) {
-    SwingNode terminalContainer = new SwingNode();
-    BorderPane root = new BorderPane();
-    root.setCenter(terminalContainer);
+    @Override
+    public void start(Stage stage) {
+        SwingNode terminalContainer = new SwingNode();
+        BorderPane root = new BorderPane();
+        root.setCenter(terminalContainer);
 
-    Scene scene = new Scene(root, 500, 500);
+        Scene scene = new Scene(root, 500, 500);
 
-    stage.setTitle("CaffeineTTY");
-    stage.setScene(scene);
-    stage.setResizable(false);
-    stage.show();
+        stage.setTitle("CaffeineTTY");
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
 
-    SwingUtilities.invokeLater(() -> {
-      JediTermWidget term = new JediTermWidget(
-          80,
-          14,
-          new DefaultSettingsProvider());
+        SwingUtilities.invokeLater(() -> {
+            JediTermWidget term = new JediTermWidget(
+                    80,
+                    14,
+                    new DefaultSettingsProvider());
 
-      terminalContainer.setContent(term);
-    });
-  }
+            terminalContainer.setContent(term);
+        });
+    }
 }
