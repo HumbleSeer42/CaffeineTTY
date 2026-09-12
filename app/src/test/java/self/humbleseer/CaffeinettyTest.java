@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CaffeinettyTest {
-  @Test
-  void Hello() {
-    System.out.println("Hello");
-  }
+    @Test
+    void Hello() {
+        System.out.println("Hello");
+    }
 }
