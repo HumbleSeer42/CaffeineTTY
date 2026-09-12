@@ -1,11 +1,13 @@
-# Ignore Gradle project-specific cache directory
-.gradle
+# Ignore Gradle specific stuffs
+.gradle/
+build/
+.kotlin/
 
-# Ignore Gradle build output directory
-build
+# Java specific stuffs
+*.class
+bin/
 
-# Ignore Kotlin plugin data
-.kotlin
-
-# Ignore Class files
-app/bin
+# Eclipse / jdtls specific stuffs
+.classpath
+.project
+.settings/
