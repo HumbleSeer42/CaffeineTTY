@@ -21,7 +21,6 @@ public class Caffeinetty extends Application {
 
         stage.setTitle("CaffeineTTY");
         stage.setScene(scene);
-        stage.setResizable(false);
         stage.show();
 
         SwingUtilities.invokeLater(() -> {
