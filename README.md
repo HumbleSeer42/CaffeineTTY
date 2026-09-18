@@ -2,7 +2,7 @@
 [![Java CI with Gradle](https://github.com/HumbleSeer42/CaffeineTTY/actions/workflows/gradle.yml/badge.svg?branch=main)](https://github.com/HumbleSeer42/CaffeineTTY/actions/workflows/gradle.yml) [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
 > [!NOTE]
-> This project is still a work in progress and is far from an actual 'terminal' right now.
+> This project is still a work in progress. Terminal functionality will be added soon.
 
 # Building and running
 Get the Git Repo:
