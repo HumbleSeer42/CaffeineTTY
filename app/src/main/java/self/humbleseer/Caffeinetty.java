@@ -11,6 +11,11 @@ import javafx.embed.swing.SwingNode;
 import javax.swing.SwingUtilities;
 
 public class Caffeinetty extends Application {
+    // Exit at once
+    public static void exit() {
+        System.exit(0);
+    }
+
     @Override
     public void start(Stage stage) {
         SwingNode terminalContainer = new SwingNode();
