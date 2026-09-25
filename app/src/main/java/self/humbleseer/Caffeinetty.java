@@ -16,6 +16,12 @@ public class Caffeinetty extends Application {
         System.exit(0);
     }
 
+    public static void windowrequests(Stage s) {
+        s.setOnCloseRequest(event -> {
+            exit();
+        });
+    }
+
     @Override
     public void start(Stage stage) {
         SwingNode terminalContainer = new SwingNode();
@@ -36,5 +42,7 @@ public class Caffeinetty extends Application {
 
             terminalContainer.setContent(term);
         });
+
+        windowrequests(stage);
     }
 }
