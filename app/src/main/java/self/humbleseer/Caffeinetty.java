@@ -11,17 +11,6 @@ import javafx.embed.swing.SwingNode;
 import javax.swing.SwingUtilities;
 
 public class Caffeinetty extends Application {
-    // Exit at once
-    public static void exit() {
-        System.exit(0);
-    }
-
-    public static void windowrequests(Stage s) {
-        s.setOnCloseRequest(event -> {
-            exit();
-        });
-    }
-
     @Override
     public void start(Stage stage) {
         SwingNode terminalContainer = new SwingNode();
@@ -34,6 +23,11 @@ public class Caffeinetty extends Application {
         stage.setScene(scene);
         stage.show();
 
+        stage.setOnCloseRequest(event -> {
+            stage.close();
+            System.exit(0);
+        });
+
         SwingUtilities.invokeLater(() -> {
             JediTermWidget term = new JediTermWidget(
                     80,
@@ -42,7 +36,5 @@ public class Caffeinetty extends Application {
 
             terminalContainer.setContent(term);
         });
-
-        windowrequests(stage);
     }
 }
