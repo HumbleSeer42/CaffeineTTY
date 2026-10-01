@@ -10,7 +10,7 @@ public class Caffeinetty extends Application {
     @Override
     public void start(Stage stage) {
         Stage s = Windowing.createWindow("CaffeineTTY", 500, 500);
-        Group group = Windowing.createGroup();
+        Group group = new Group();
         Scene scene = Windowing.createScene(group, s);
         scene.setFill(Color.BLACK);
 

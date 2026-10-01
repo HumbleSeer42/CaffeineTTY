@@ -19,10 +19,4 @@ public class Windowing {
 
         return scene;
     }
-
-    public static Group createGroup() {
-        Group root = new Group();
-
-        return root;
-    }
 }
