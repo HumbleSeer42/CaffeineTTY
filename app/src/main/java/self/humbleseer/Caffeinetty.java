@@ -1,40 +1,33 @@
 package self.humbleseer;
 
 import javafx.application.Application;
+import javafx.embed.swing.SwingNode;
+import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.scene.layout.BorderPane;
-
-import com.jediterm.terminal.ui.JediTermWidget;
-import com.jediterm.terminal.ui.settings.DefaultSettingsProvider;
-import javafx.embed.swing.SwingNode;
-import javax.swing.SwingUtilities;
+import javafx.scene.paint.Color;
 
 public class Caffeinetty extends Application {
     @Override
     public void start(Stage stage) {
-        SwingNode terminalContainer = new SwingNode();
-        BorderPane root = new BorderPane();
-        root.setCenter(terminalContainer);
+        Stage s = Windowing.createWindow("CaffeineTTY", 500, 500);
+        Group group = new Group();
+        Scene scene = Windowing.createScene(group, s);
+        SwingNode sn = new SwingNode();
 
-        Scene scene = new Scene(root, 500, 500);
+        TTYEmu term = new TTYEmu();
+        term.init(sn, group);
 
-        stage.setTitle("CaffeineTTY");
-        stage.setScene(scene);
-        stage.show();
+        scene.setFill(Color.BLACK);
 
-        stage.setOnCloseRequest(event -> {
-            stage.close();
+        s.setScene(scene);
+        s.show();
+
+        s.setOnCloseRequest(event -> {
+            System.out.println("Shutting down");
+            s.close();
+            System.out.println("Terminating...");
             System.exit(0);
-        });
-
-        SwingUtilities.invokeLater(() -> {
-            JediTermWidget term = new JediTermWidget(
-                    80,
-                    14,
-                    new DefaultSettingsProvider());
-
-            terminalContainer.setContent(term);
         });
     }
 }
