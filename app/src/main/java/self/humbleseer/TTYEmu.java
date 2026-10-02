@@ -10,7 +10,7 @@ import javafx.scene.Group;
 
 public class TTYEmu {
     public void init(SwingNode swingNode, Group g) {
-        JediTermWidget jtw = new JediTermWidget(80, 14, new DefaultSettingsProvider());
+        JediTermWidget jtw = new JediTermWidget(60, 24, new DefaultSettingsProvider());
 
         SwingUtilities.invokeLater(() -> {
             swingNode.setContent(jtw);

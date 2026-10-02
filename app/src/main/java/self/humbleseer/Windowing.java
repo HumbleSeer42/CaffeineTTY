@@ -10,6 +10,7 @@ public class Windowing {
         stage.setTitle(title);
         stage.setWidth(width);
         stage.setHeight(height);
+        stage.setResizable(false);
 
         return stage;
     }
