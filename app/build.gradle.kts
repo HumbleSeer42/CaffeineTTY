@@ -49,3 +49,12 @@ tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+tasks.shadowJar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    archiveBaseName.set("caffeinetty")
+    mergeServiceFiles()
+    manifest {
+        attributes("Main-Class" to "self.humbleseer.Main")
+    }
+}
