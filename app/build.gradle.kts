@@ -1,7 +1,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
-    id 'application'
-    id 'org.openjfx.javafxplugin' version '0.1.0'
+    application
+    id("org.openjfx.javafxplugin") version "0.1.0"
 }
 
 repositories {
@@ -10,21 +10,21 @@ repositories {
 
     maven {
         url = uri("https://packages.jetbrains.team/maven/p/ij/intellij-dependencies")
-      }
+    }
 }
 
 dependencies {
     // Use JUnit Jupiter for testing.
-    testImplementation libs.junit.jupiter
+    testImplementation(libs.junit.jupiter)
 
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
     // This dependency is used by the application.
-    implementation libs.guava
+    implementation(libs.guava)
 
-    implementation 'org.jetbrains.jediterm:jediterm-core:3.63'
-    implementation 'org.jetbrains.jediterm:jediterm-ui:3.63'
-    implementation 'org.jetbrains.pty4j:pty4j:0.13.13'
+    implementation("org.jetbrains.jediterm:jediterm-core:3.63")
+    implementation("org.jetbrains.jediterm:jediterm-ui:3.63")
+    implementation("org.jetbrains.pty4j:pty4j:0.13.13")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -35,19 +35,16 @@ java {
 }
 
 javafx {
-	version = '25'
-	modules = [
-  'javafx.controls',
-  'javafx.swing'
-  ]
+    version = "25"
+    modules("javafx.controls", "javafx.fxml", "javafx.swing")
 }
 
 application {
     // Define the main class for the application.
-    mainClass = 'self.humbleseer.Caffeinetty'
+    mainClass = "self.humbleseer.Caffeinetty"
 }
 
-tasks.named('test') {
+tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
