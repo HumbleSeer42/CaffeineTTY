@@ -25,7 +25,7 @@ dependencies {
 
     implementation("org.jetbrains.jediterm:jediterm-core:3.63")
     implementation("org.jetbrains.jediterm:jediterm-ui:3.63")
-    implementation("org.jetbrains.pty4j:pty4j:0.13.13")
+    implementation("org.jetbrains.pty4j:pty4j:0.14.0")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
