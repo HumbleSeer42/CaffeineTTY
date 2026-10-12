@@ -1,7 +1,6 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
-    id("org.openjfx.javafxplugin") version "0.1.0"
     id("com.gradleup.shadow") version "9.6.1"
 }
 
@@ -35,14 +34,9 @@ java {
     }
 }
 
-javafx {
-    version = "25"
-    modules("javafx.controls", "javafx.fxml", "javafx.swing")
-}
-
 application {
     // Define the main class for the application.
-    mainClass = "self.humbleseer.Caffeinetty"
+    mainClass = "self.humbleseer.CaffeineTTY"
 }
 
 tasks.named<Test>("test") {
@@ -55,6 +49,6 @@ tasks.shadowJar {
     archiveBaseName.set("caffeinetty")
     mergeServiceFiles()
     manifest {
-        attributes("Main-Class" to "self.humbleseer.Main")
+        attributes("Main-Class" to "self.humbleseer.CaffeineTTY")
     }
 }
