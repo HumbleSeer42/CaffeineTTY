@@ -8,8 +8,8 @@ import com.jediterm.terminal.ui.JediTermWidget;
 import com.jediterm.terminal.ui.settings.DefaultSettingsProvider;
 
 public class CaffeineTTY {
-    JFrame window;
-    JediTermWidget terminal;
+    static JFrame window;
+    static JediTermWidget terminal;
 
     CaffeineTTY(String[] args) {
         // Event dispatching and init here
@@ -19,7 +19,10 @@ public class CaffeineTTY {
         window.setResizable(false);
         window.setDefaultCloseOperation(3);
         terminal = new JediTermWidget(80, 24, new DefaultSettingsProvider());
-        terminal.getTerminalPanel().setDefaultCursorShape(CursorShape.BLINK_UNDERLINE);
+        terminal.getTerminalPanel()
+            .setDefaultCursorShape(CursorShape.BLINK_UNDERLINE);
+        terminal.setTtyConnector(null);
+        terminal.start();
         window.add(terminal);
     }
 
