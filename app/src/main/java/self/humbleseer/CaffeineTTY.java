@@ -3,6 +3,7 @@ package self.humbleseer;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
+import com.jediterm.terminal.CursorShape;
 import com.jediterm.terminal.ui.JediTermWidget;
 import com.jediterm.terminal.ui.settings.DefaultSettingsProvider;
 
@@ -18,6 +19,7 @@ public class CaffeineTTY {
         window.setResizable(false);
         window.setDefaultCloseOperation(3);
         terminal = new JediTermWidget(80, 24, new DefaultSettingsProvider());
+        terminal.getTerminalPanel().setDefaultCursorShape(CursorShape.BLINK_UNDERLINE);
         window.add(terminal);
     }
 
