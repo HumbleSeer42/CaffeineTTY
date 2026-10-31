@@ -32,3 +32,6 @@ nbdist/
 *.swp
 *.swo
 *~
+
+# mvn stuff
+target/
